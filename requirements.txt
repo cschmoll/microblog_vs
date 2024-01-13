@@ -1,0 +1,13 @@
+Flask
+gunicorn
+sqlalchemy
+sqlalchemy-serializer
+flask-sqlalchemy
+flask-migrate
+flask_wtf
+wtforms
+psycopg2
+python-dotenv
+flask-login
+email-validator
+logging
