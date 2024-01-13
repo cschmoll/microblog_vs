@@ -1,4 +1,6 @@
 import logging
+from logging.handlers import RotatingFileHandler
+import os
 from flask import Flask
 from config import Config
 from flask_sqlalchemy import SQLAlchemy
@@ -29,19 +31,16 @@ if not app.debug:
       mail_handler.setLevel(logging.ERROR)
       app.logger.addHandler(mail_handler)
 
-from app_package import route, models, errors
+      if not os.path.exists('logs'):
+            os.mkdir('logs')
+            file_handler = RotatingFileHandler('logs/microblog.log', maxBytes=10240,
+                                        backupCount=10)
+            file_handler.setFormatter(logging.Formatter(
+            '%(asctime)s %(levelname)s: %(message)s [in %(pathname)s:%(lineno)d]'))
+            file_handler.setLevel(logging.INFO)
+            app.logger.addHandler(file_handler)
 
-#from app.models import User, Post
-#app.app_context().push()
-#u = User()
-#u.username = 'admin'
-#u.email = 'ztejd@example.com'
-#u.password_hash = 'admin'
-#db.session.add(u)
-#db.session.commit()
-#u = db.session.get(User, 1)
-#p = Post()
-#p.body = 'my first post!'
-#p.author = u
-#db.session.add(p)
-#db.session.commit()
+            app.logger.setLevel(logging.INFO)
+            app.logger.info('Microblog startup')
+
+from app_package import route, models, errors
