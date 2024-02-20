@@ -11,3 +11,5 @@ python-dotenv
 flask-login
 email-validator
 logging
+flask-mail
+pyjwtpip 
