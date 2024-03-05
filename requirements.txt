@@ -12,5 +12,5 @@ flask-login
 email-validator
 logging
 flask-mail
-pyjwtpip 
+pyjwt 
 flask-moment
