@@ -1,0 +1,206 @@
+# German translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-03-17 17:47+0100\n"
+"PO-Revision-Date: 2024-03-17 16:54+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: app_package/__init__.py:29
+msgid "Please log in to access this page."
+msgstr "Bitte melde dich an um auf diese Seite zuzugreifen"
+
+#: app_package/__init__.py:66
+msgid "Microblog startup"
+msgstr "Microblog Start"
+
+#: app_package/forms.py:13 app_package/forms.py:19 app_package/forms.py:39
+msgid "Username"
+msgstr "Benutzername"
+
+#: app_package/forms.py:14 app_package/forms.py:21 app_package/forms.py:67
+msgid "Password"
+msgstr "Passwort"
+
+#: app_package/forms.py:15
+msgid "Remember Me"
+msgstr "Erinnern"
+
+#: app_package/forms.py:16 app_package/templates/login.html:5
+msgid "Sign In"
+msgstr "Anmelden"
+
+#: app_package/forms.py:20 app_package/forms.py:63
+msgid "Email"
+msgstr "eMail"
+
+#: app_package/forms.py:23 app_package/forms.py:69
+msgid "Repeat Password"
+msgstr "Passwort wiederholen"
+
+#: app_package/forms.py:24
+msgid "Register"
+msgstr "Registrieren"
+
+#: app_package/forms.py:30 app_package/forms.py:51 app_package/forms.py:52
+msgid "Please use a different username."
+msgstr "Bitte benutze einen anderen Benutzernamen"
+
+#: app_package/forms.py:36
+msgid "Please use a different email address."
+msgstr "Bitte benutze eine andere eMail"
+
+#: app_package/forms.py:40
+msgid "About me"
+msgstr "Über mich"
+
+#: app_package/forms.py:41 app_package/forms.py:60
+msgid "Submit"
+msgstr "Senden"
+
+#: app_package/forms.py:58
+msgid "Say something"
+msgstr "Sage etwas"
+
+#: app_package/forms.py:64 app_package/forms.py:70
+msgid "Request Password Reset"
+msgstr "Passwort zurücksetzen anfordern"
+
+#: app_package/route.py:33
+msgid "Your post is now live!"
+msgstr "Dein Beitrag ist jetzt live!"
+
+#: app_package/route.py:53
+msgid "Invalid username or password"
+msgstr "Ungültiger Benutzername oder Passwort"
+
+#: app_package/route.py:77
+msgid "Congratulations, you are now a registered user!"
+msgstr "Glückwunsch, du bist jetzt ein registrierter Benutzer"
+
+#: app_package/route.py:101
+msgid "Your changes have been saved."
+msgstr "Deine Änderungen wurden gesichert"
+
+#: app_package/route.py:116 app_package/route.py:137
+msgid "User %(username) not found."
+msgstr "Benutzer %(username) nicht gefunden."
+
+#: app_package/route.py:119
+msgid "You cannot follow yourself!"
+msgstr "Du kannst nicht Dir selbst folgen"
+
+#: app_package/route.py:123
+msgid "You are following %(username)!"
+msgstr "Du folgst jetzt %(username)!"
+
+#: app_package/route.py:140
+msgid "You cannot unfollow yourself!"
+msgstr "Du kannst nicht Dir selbst folgen"
+
+#: app_package/route.py:144
+msgid "You are not following %(username)."
+msgstr "Du folgst nicht %(username)."
+
+#: app_package/route.py:169
+msgid "Check your email for the instructions to reset your password"
+msgstr "Prüge deine Mail für Anweisungen wie Du dein Passwort zurücksetzt"
+
+#: app_package/route.py:185
+msgid "Your password has been reset."
+msgstr "Dein Passwort wurde zurückgesetzt"
+
+#: app_package/templates/404.html:4
+msgid "File Not Found"
+msgstr "Datei nicht gefunden"
+
+#: app_package/templates/_post.html:12
+msgid "said"
+msgstr "sagte"
+
+#: app_package/templates/base.html:7 app_package/templates/base.html:20
+#, fuzzy
+msgid "Microblog"
+msgstr "Microblog Start"
+
+#: app_package/templates/base.html:9
+msgid "Welcome to Microblog"
+msgstr "Willkommen zur Micorblog App"
+
+#: app_package/templates/base.html:27
+msgid "Home"
+msgstr "Home"
+
+#: app_package/templates/base.html:30
+msgid "Explore"
+msgstr "Entdecke"
+
+#: app_package/templates/base.html:36
+msgid "Login"
+msgstr "Anmelden"
+
+#: app_package/templates/base.html:40
+msgid "Profile"
+msgstr "Profil"
+
+#: app_package/templates/base.html:43
+msgid "Logout"
+msgstr "Abmelden"
+
+#: app_package/templates/edit_profile.html:5
+#, fuzzy
+msgid "Edit Profile"
+msgstr "Profil"
+
+#: app_package/templates/index.html:16 app_package/templates/user.html:37
+msgid "Newer posts"
+msgstr "Neuere Posts"
+
+#: app_package/templates/index.html:21 app_package/templates/user.html:40
+msgid "Older posts"
+msgstr "Ältere Posts"
+
+#: app_package/templates/login.html:7
+msgid "New User?"
+msgstr "Neuer Benutzer?"
+
+#: app_package/templates/login.html:7
+msgid "Click to Register!"
+msgstr "Registrieren!"
+
+#: app_package/templates/login.html:9
+msgid "Forgot Your Password?"
+msgstr "Passwort vergessen?"
+
+#: app_package/templates/login.html:10
+msgid "Click to Reset It"
+msgstr "Zurücksetzen"
+
+#: app_package/templates/user.html:10
+msgid "Last seen on:"
+msgstr "Zuletzt gesehen am:"
+
+#: app_package/templates/user.html:11
+msgid "followers"
+msgstr "Folgen mir"
+
+#: app_package/templates/user.html:11
+msgid "following."
+msgstr "Folge ich"
+
+#: app_package/templates/user.html:13
+msgid "Edit your profile"
+msgstr "Bearbeite Dein Profil"
+

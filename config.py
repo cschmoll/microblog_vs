@@ -21,3 +21,4 @@ class Config:
     MAIL_USERNAME_GMAIL = os.environ.get('MAIL_USERNAME_GMAIL')
     MAIL_PASSWORD_GMAIL = os.environ.get('MAIL_PASSWORD_GMAIL')
     POSTS_PER_PAGE = 2
+    LANGUAGES = ['en', 'de']

@@ -1,3 +1,4 @@
+from flask import request
 import logging
 from logging.handlers import RotatingFileHandler
 import os
@@ -9,16 +10,24 @@ from flask_login import LoginManager
 from logging.handlers import SMTPHandler 
 from flask_mail import Mail
 from flask_moment import Moment
+from flask_babel import Babel
+from flask_babel import lazy_gettext as _l
 #import smtplib
+
+
+def get_locale():
+    return request.accept_languages.best_match(app.config['LANGUAGES'])
 
 app = Flask(__name__)
 app.config.from_object(Config)
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
-login = LoginManager(app)
 mail = Mail(app)
 moment = Moment(app)
+login = LoginManager(app)
 login.login_view = 'login'
+login.login_message = _l('Please log in to access this page.')
+babel = Babel(app, locale_selector=get_locale)
 
 if not app.debug:
   #versenden einer Mail über mein Gmail Konto
@@ -54,6 +63,6 @@ if not app.debug:
   app.logger.addHandler(file_handler)
 
   app.logger.setLevel(logging.INFO)
-  app.logger.info('Microblog startup')
+  app.logger.info(_l('Microblog startup'))
 
 from app_package import route, models, errors
