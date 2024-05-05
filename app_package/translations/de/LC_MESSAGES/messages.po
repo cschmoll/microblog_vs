@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-17 17:47+0100\n"
+"POT-Creation-Date: 2024-04-28 18:55+0200\n"
 "PO-Revision-Date: 2024-03-17 16:54+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: de\n"
@@ -78,57 +78,70 @@ msgstr "Sage etwas"
 msgid "Request Password Reset"
 msgstr "Passwort zurücksetzen anfordern"
 
-#: app_package/route.py:33
+#: app_package/route.py:41
 msgid "Your post is now live!"
 msgstr "Dein Beitrag ist jetzt live!"
 
-#: app_package/route.py:53
+#: app_package/route.py:61
 msgid "Invalid username or password"
 msgstr "Ungültiger Benutzername oder Passwort"
 
-#: app_package/route.py:77
+#: app_package/route.py:85
 msgid "Congratulations, you are now a registered user!"
 msgstr "Glückwunsch, du bist jetzt ein registrierter Benutzer"
 
-#: app_package/route.py:101
+#: app_package/route.py:109
 msgid "Your changes have been saved."
 msgstr "Deine Änderungen wurden gesichert"
 
-#: app_package/route.py:116 app_package/route.py:137
+#: app_package/route.py:124 app_package/route.py:145
 msgid "User %(username) not found."
 msgstr "Benutzer %(username) nicht gefunden."
 
-#: app_package/route.py:119
+#: app_package/route.py:127
 msgid "You cannot follow yourself!"
 msgstr "Du kannst nicht Dir selbst folgen"
 
-#: app_package/route.py:123
+#: app_package/route.py:131
 msgid "You are following %(username)!"
 msgstr "Du folgst jetzt %(username)!"
 
-#: app_package/route.py:140
+#: app_package/route.py:148
 msgid "You cannot unfollow yourself!"
 msgstr "Du kannst nicht Dir selbst folgen"
 
-#: app_package/route.py:144
+#: app_package/route.py:152
 msgid "You are not following %(username)."
 msgstr "Du folgst nicht %(username)."
 
-#: app_package/route.py:169
+#: app_package/route.py:177
 msgid "Check your email for the instructions to reset your password"
 msgstr "Prüge deine Mail für Anweisungen wie Du dein Passwort zurücksetzt"
 
-#: app_package/route.py:185
+#: app_package/route.py:193
 msgid "Your password has been reset."
 msgstr "Dein Passwort wurde zurückgesetzt"
+
+#: app_package/translate.py:8
+msgid "Error: the translation service is not configured."
+msgstr ""
+
+#: app_package/translate.py:18
+msgid "Error: the translation service failed."
+msgstr ""
 
 #: app_package/templates/404.html:4
 msgid "File Not Found"
 msgstr "Datei nicht gefunden"
 
-#: app_package/templates/_post.html:12
-msgid "said"
-msgstr "sagte"
+#: app_package/templates/_post.html:14
+#, python-format
+msgid "%(username)s said %(when)s"
+msgstr ""
+
+#: app_package/templates/_post.html:25
+msgid "Translate"
+msgstr Übersetze"
 
 #: app_package/templates/base.html:7 app_package/templates/base.html:20
 #, fuzzy
@@ -203,4 +216,7 @@ msgstr "Folge ich"
 #: app_package/templates/user.html:13
 msgid "Edit your profile"
 msgstr "Bearbeite Dein Profil"
+
+#~ msgid "said"
+#~ msgstr "sagte"
 

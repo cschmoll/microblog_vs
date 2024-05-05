@@ -13,6 +13,8 @@ from app_package.email import send_password_reset_email
 from app_package.forms import ResetPasswordRequestForm, ResetPasswordForm
 from flask_babel import Babel, get_locale
 from flask_babel import gettext as _
+from langdetect import detect, LangDetectException
+from app_package.translate import translate
 
 @app.before_request
 def before_request():
@@ -27,7 +29,13 @@ def before_request():
 def index():
     form = PostForm()
     if form.validate_on_submit():
-        post = Post(body=form.post.data, author=current_user)
+        try:
+            language = detect(form.post.data)
+        except LangDetectException:
+            language = ''
+        post = Post(body=form.post.data, author=current_user,
+                    language=language)       
+#        post = Post(body=form.post.data, author=current_user)
         db.session.add(post)
         db.session.commit()
         flash(_('Your post is now live!'))
@@ -185,3 +193,11 @@ def reset_password(token):
         flash(_('Your password has been reset.'))
         return redirect(url_for('login'))
     return render_template('reset_password.html', form=form)
+
+@app.route('/translate', methods=['POST'])
+@login_required
+def translate_text():
+    data = request.get_json()
+    return {'text': translate(data['text'],
+                              data['source_language'],
+                              data['dest_language'])}

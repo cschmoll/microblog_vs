@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-17 17:47+0100\n"
+"POT-Creation-Date: 2024-04-28 18:55+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -77,56 +77,69 @@ msgstr ""
 msgid "Request Password Reset"
 msgstr ""
 
-#: app_package/route.py:33
+#: app_package/route.py:41
 msgid "Your post is now live!"
 msgstr ""
 
-#: app_package/route.py:53
+#: app_package/route.py:61
 msgid "Invalid username or password"
 msgstr ""
 
-#: app_package/route.py:77
+#: app_package/route.py:85
 msgid "Congratulations, you are now a registered user!"
 msgstr ""
 
-#: app_package/route.py:101
+#: app_package/route.py:109
 msgid "Your changes have been saved."
 msgstr ""
 
-#: app_package/route.py:116 app_package/route.py:137
+#: app_package/route.py:124 app_package/route.py:145
 msgid "User %(username) not found."
 msgstr ""
 
-#: app_package/route.py:119
+#: app_package/route.py:127
 msgid "You cannot follow yourself!"
 msgstr ""
 
-#: app_package/route.py:123
+#: app_package/route.py:131
 msgid "You are following %(username)!"
 msgstr ""
 
-#: app_package/route.py:140
+#: app_package/route.py:148
 msgid "You cannot unfollow yourself!"
 msgstr ""
 
-#: app_package/route.py:144
+#: app_package/route.py:152
 msgid "You are not following %(username)."
 msgstr ""
 
-#: app_package/route.py:169
+#: app_package/route.py:177
 msgid "Check your email for the instructions to reset your password"
 msgstr ""
 
-#: app_package/route.py:185
+#: app_package/route.py:193
 msgid "Your password has been reset."
+msgstr ""
+
+#: app_package/translate.py:8
+msgid "Error: the translation service is not configured."
+msgstr ""
+
+#: app_package/translate.py:18
+msgid "Error: the translation service failed."
 msgstr ""
 
 #: app_package/templates/404.html:4
 msgid "File Not Found"
 msgstr ""
 
-#: app_package/templates/_post.html:12
-msgid "said"
+#: app_package/templates/_post.html:14
+#, python-format
+msgid "%(username)s said %(when)s"
+msgstr ""
+
+#: app_package/templates/_post.html:25
+msgid "Translate"
 msgstr ""
 
 #: app_package/templates/base.html:7 app_package/templates/base.html:20

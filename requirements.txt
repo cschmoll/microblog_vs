@@ -15,3 +15,5 @@ flask-mail
 pyjwt 
 flask-moment
 flask-babel
+langdetect
+requests
