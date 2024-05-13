@@ -29,6 +29,15 @@ login.login_view = 'login'
 login.login_message = _l('Please log in to access this page.')
 babel = Babel(app, locale_selector=get_locale)
 
+from app_package.errors import bp as errors_bp
+app.register_blueprint(errors_bp)
+
+from app_package.auth import bp as auth_bp
+app.register_blueprint(auth_bp, url_prefix='/auth')
+
+from app_package.main import bp as main_bp
+app.register_blueprint(main_bp)
+
 if not app.debug:
   #versenden einer Mail über mein Gmail Konto
   #server = smtplib.SMTP(app.config['MAIL_SERVER_GMAIL'], app.config['MAIL_PORT'])
@@ -65,4 +74,4 @@ if not app.debug:
   app.logger.setLevel(logging.INFO)
   app.logger.info(_l('Microblog startup'))
 
-from app_package import route, models, errors
+from app_package import models
