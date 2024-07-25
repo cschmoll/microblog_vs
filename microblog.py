@@ -1,9 +1,11 @@
-from app_package import app
-import random
 import sqlalchemy as sa
 import sqlalchemy.orm as so
-from app_package import app, db
+from app_package import db
+from app_package import create_app
 from app_package.models import User, Post
+
+
+app = create_app()
 
 @app.shell_context_processor
 def make_shell_context():

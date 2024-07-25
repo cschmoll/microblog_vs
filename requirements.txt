@@ -6,14 +6,15 @@ flask-sqlalchemy
 flask-migrate
 flask_wtf
 wtforms
-psycopg2
+#psycopg2
 python-dotenv
 flask-login
 email-validator
-logging
+#logging
 flask-mail
 pyjwt 
 flask-moment
 flask-babel
 langdetect
 requests
+elasticsearch

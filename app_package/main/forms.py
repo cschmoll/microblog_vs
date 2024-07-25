@@ -6,8 +6,8 @@ from app_package import db
 from app_package.models import User
 from wtforms import TextAreaField
 from wtforms.validators import Length
-from app_package import app
 from flask_babel import lazy_gettext as _l
+from flask import request, current_app
 
 class EditProfileForm(FlaskForm):
   username = StringField(_l('Username'), validators=[DataRequired()])
@@ -22,7 +22,7 @@ class EditProfileForm(FlaskForm):
     if username.data != self.original_username:
         user = db.session.scalar(sa.select(User).where(User.username == self.username.data))
         if user is not None:
-            app.logger.error(_l('Please use a different username.'))
+            current_app.logger.error(_l('Please use a different username.'))
             raise ValidationError(_l('Please use a different username.'))
         
 class EmptyForm(FlaskForm):
@@ -31,4 +31,14 @@ class EmptyForm(FlaskForm):
 class PostForm(FlaskForm):
     post = TextAreaField(_l('Say something'), validators=[
         DataRequired(), Length(min=1, max=140)])
-    submit = SubmitField(_l('Submit'))    
+    submit = SubmitField(_l('Submit'))  
+
+class SearchForm(FlaskForm):
+    q = StringField(_l('Search'), validators=[DataRequired()])
+
+    def __init__(self, *args, **kwargs):
+        if 'formdata' not in kwargs:
+            kwargs['formdata'] = request.args
+        if 'meta' not in kwargs:
+            kwargs['meta'] = {'csrf': False}
+        super(SearchForm, self).__init__(*args, **kwargs)      

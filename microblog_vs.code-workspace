@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"sqltools.connections": [
+			{
+				"previewLimit": 50,
+				"driver": "SQLite",
+				"name": "sqlite",
+				"database": "${workspaceFolder:microblog_vs}/app.db"
+			}
+		]
+	}
+}
